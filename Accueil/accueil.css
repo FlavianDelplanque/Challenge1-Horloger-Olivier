@@ -1,0 +1,54 @@
+#Contenu {
+	margin: 25vh auto 15vh auto;
+	background-color: rgb(55,55,55,0.9);
+	width: 60vmin;
+	display: flex;
+	flex-direction: column;	
+}
+@font-face {
+	font-family: "MontserratRegular";
+	src: url("../Font/Montserrat-Regular.ttf");
+}
+#LogoContenu {
+	margin: 20px auto 20px auto;
+	width: 38vmin;
+}
+p {
+	text-align: center;
+	width: 80%;
+	margin: 10px auto 10px auto;
+	color: #C0B283;
+	font-family: "MontserratRegular";
+	font-size: 2vmin;
+}
+#Montre {
+	width: 31vmin;
+	margin-left: 24%;
+	margin-bottom: 20px;
+}
+#servicesB {
+	margin: 2vh auto 20px auto;
+}
+#services {
+	padding: 1vmin 4vmin 1vmin 4vmin;
+	background-color: transparent;
+	border: 2px solid black;
+	box-shadow: 10px 5px 5px #373737;
+	color: #C0B283;
+	font-family: "MontserratRegular";
+	font-size: 2vmin;
+}
+#services:hover {
+	background-color: rgba(0,0,0,0.2);
+}
+#services:focus {
+	outline: 1px solid transparent;
+}
+@media screen and (max-width: 640px) {
+	p, #services {
+		font-size: 4vmin;
+	}
+	#Contenu {
+		width: 80vmin;
+	}
+}

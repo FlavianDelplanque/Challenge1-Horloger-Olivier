@@ -1,0 +1,85 @@
+#contenu {
+	display: grid;
+	grid-template-columns: 1fr 27vw 1fr 27vw 1fr 35vw 1fr;
+  	grid-template-rows: 1fr 28vh 1fr 28vh 1fr;
+}
+@font-face {
+	font-family: "CinzelRegular";
+	src: url("../Font/Cinzel-Regular.ttf");
+}
+#service {
+	grid-column: 2;
+	color: #C0B283;
+	font-family: "CinzelRegular";
+	font-size: 4vmin;
+}
+#montres {
+	grid-column-start: 2;
+	grid-column-end: 5;
+  	grid-row-start: 2;
+  	grid-row-end: 2;
+  	background-image: url("../Image/img_03.jpg");
+  	background-size: cover;
+  	background-position: center;
+}
+#montres:hover {
+	background-image: url("../Image/img_02.jpg");
+}
+#montresagousset {
+	grid-column-start: 2;
+	grid-column-end: 2;
+  	grid-row-start: 4;
+  	grid-row-end: 4;
+  	background-image: url("../Image/img_04.jpg");
+  	background-size: cover;
+  	background-position: center;
+}
+#montresagousset:hover {
+	background-image: url("../Image/img_01.jpg");
+}
+#reparation {
+	grid-column-start: 4;
+	grid-column-end: 4;
+  	grid-row-start: 4;
+  	grid-row-end: 4;
+  	background-image: url("../Image/img_11.jpg");
+  	background-size: cover;
+  	background-position: center;
+}
+#reparation:hover {
+	background-image: url("../Image/pattern_04.jpg");
+}
+#horlogerie {
+	grid-column-start: 6;
+	grid-column-end: 6;
+  	grid-row-start: 2;
+  	grid-row-end: 5;
+  	background-image: url("../Image/img_05.jpg");
+  	background-size: cover;
+  	background-position: center;
+}
+#horlogerie:hover {
+	background-image: url("../Image/img_09.jpg");
+}
+.test {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #373737;
+}
+.Titre {
+	text-align: center;
+	text-shadow: -1px 0 #C0B283, 0 1px #C0B283,
+    1px 0 #C0B283, 0 -1px #C0B283;
+    font-size: 4vmin;
+    font-family: "CinzelRegular";
+}
+
+@media screen and (max-width: 640px) {
+	#service {
+		font-size: 6vmin;
+	}
+	.Titre {
+		font-size: 4vmin;
+	}
+}

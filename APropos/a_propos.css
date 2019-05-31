@@ -1,0 +1,101 @@
+#contenu {
+	display: grid;
+	grid-template-columns: 1fr 44vw 1fr 44vw 1fr;
+  	grid-template-rows: 1fr 35vh 1fr 21vh 1fr;
+}
+@font-face {
+	font-family: "CinzelRegular";
+	src: url("../Font/Cinzel-Regular.ttf");
+}
+@font-face {
+	font-family: "MontserratRegular";
+	src: url("../Font/Montserrat-Regular.ttf");
+}
+#APropos {
+	grid-column: 2;
+	font-size: 4vmin;
+}
+#horlogerie {
+	grid-column: 2;
+	grid-row-start: 2;
+	grid-row-end: 5;
+	text-align: center;
+}
+h1 {
+	color: #C0B283;
+	font-family: "CinzelRegular";
+	font-size: 3vmin;
+}
+p {
+	color: #C0B283;
+	text-align: justify;
+	font-family: "MontserratRegular";
+	padding-left: 2vmin;
+	padding-right: 2vmin;
+	font-size: 1.6vmin;
+}
+li {
+	color: #C0B283;
+	font-size: 2vmin;
+	list-style-type: none;
+	text-align: justify;
+}
+ul {
+	margin-left: -20px;
+}
+#PhotoOlivier {
+	grid-column: 4;
+	grid-row: 2;
+	background-image: url("../Image/olivier.jpg");
+	background-size: cover;
+	background-position: center;
+}
+#reseauxsociaux {
+	grid-column: 2;
+	grid-row: 4;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#Olivier {
+	grid-column: 4;
+	grid-row-start: 3;
+	grid-row-end: 5;
+	text-align: center;
+}
+.fond {
+	background-color: rgba(55,55,55,0.9);
+}
+.Icone {
+	width: 8vmin;
+	height: 8vmin;
+}
+.Icone:hover {
+	opacity: 0.8;
+}
+@media screen and (max-width: 640px) {
+	#contenu {
+		display: grid;
+		grid-template-columns: 1fr 80vw 1fr;
+	  	grid-template-rows: 1fr 32vh 1fr 14vh 1fr 26vh 1fr 20vh 1fr;
+	}
+	#PhotoOlivier {
+		grid-column: 2;
+		grid-row: 6;
+	}
+	#reseauxsociaux {
+		grid-column: 2;
+		grid-row: 4;
+	}
+	#Olivier {
+		grid-column: 2;
+		grid-row-start: 7;
+		grid-row-end: 9;
+	}
+	#APropos, h1 {
+		font-size: 6vmin;
+	}
+	p, li {
+		font-size: 2.5vmin;
+	}
+}

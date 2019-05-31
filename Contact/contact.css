@@ -1,0 +1,118 @@
+#contenu {
+	display: grid;
+	grid-template-columns: 1fr 44vw 1fr 44vw 1fr;
+  	grid-template-rows: 1fr 66vh 1fr;
+}
+#contenuF {
+	grid-column: 2;
+	grid-row: 2;
+	display: flex;
+	align-items: center;
+}
+@font-face {
+	font-family: "CinzelRegular";
+	src: url("../Font/Cinzel-Regular.ttf");
+}
+@font-face {
+	font-family: "MontserratRegular";
+	src: url("../Font/Montserrat-Regular.ttf");
+}
+h1 {
+	grid-column: 2;
+	color: #C0B283;
+	font-family: "CinzelRegular";
+	font-size: 4vmin;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(55,55,55,0.7);
+	width: 100%;
+	padding: 2vmin;
+}
+.InfoB {
+	background-color: transparent;
+	border-top: 1px solid transparent;
+	border-right: 1px solid transparent;
+	border-left: 1px solid transparent;
+	border-bottom: 2px solid black;
+	margin-bottom: 2vh;
+	box-shadow: 5px 5px 5px #373737;
+	color: #C0B283;
+	font-size: 2vmin;
+}
+.InfoB:focus, #EMessage:focus, #Envoyer {
+	outline: solid transparent 1px;
+}
+label {
+	margin-bottom: 2vh;
+	color: #C0B283;
+	font-family: "MontserratRegular";
+	font-size: 2vmin;
+}
+#Message {
+	display: flex;
+	flex-direction: column;
+}
+#EMessage {
+	background-color: transparent;
+	border: 2px solid black;
+	box-shadow: 10px 5px 5px #373737;
+	height: 20vh;
+	color: #C0B283;
+	font-size: 2vmin;
+}
+#Envoyer {
+	margin: 2vh auto auto auto;
+	padding: 1vmin 4vmin 1vmin 4vmin;
+	background-color: transparent;
+	border: 2px solid black;
+	box-shadow: 10px 5px 5px #373737;
+	color: #C0B283;
+	font-family: "MontserratRegular";
+	font-size: 2vmin;
+}
+#Envoyer:hover {
+	background-color: rgba(0,0,0,0.2);
+}
+#contenuA {
+	grid-column: 4;
+	grid-row: 2;
+	display: flex;
+	align-items: center;
+}
+#contenuMap {
+	background-color: rgba(55,55,55,0.7);
+	padding: 2vmin;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+iframe {
+	width: 100%;
+	height: 25vh;
+	margin-top: 4vh;
+}
+p {
+	color: #C0B283;
+	text-align: center;
+	font-family: "MontserratRegular";
+	font-size: 2vmin;
+}
+@media screen and (max-width: 640px) {
+	#contenu {
+		display: grid;
+		grid-template-columns: 1fr 80vw 1fr;
+	  	grid-template-rows: 1fr 62vh 1fr 50vh 1fr;
+	}
+	#contenuA {
+		grid-column: 2;
+		grid-row: 4;
+	}
+	label, #Envoyer, p, #EMessage, .InfoB {
+		font-size: 4vmin;
+	}
+	h1 {
+		font-size: 6vmin;
+	}
+}

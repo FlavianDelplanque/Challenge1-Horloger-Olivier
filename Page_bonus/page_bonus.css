@@ -1,0 +1,477 @@
+/* CONTENU HORLOGE */
+#horloge {
+	width: 50vmin;
+	height: 50vmin;
+	border: 10px solid rgba(192, 178, 131, 0.8);
+	background: linear-gradient(217deg, rgba(192, 178, 131, 0.8), rgba(255,0,0,0) 70.71%),              linear-gradient(127deg, rgba(192, 178, 131, 0.8), rgba(0,255,0,0) 70.71%),
+	linear-gradient(336deg, rgba(192, 178, 131, 0.8), rgba(0,0,255,0) 70.71%);
+	border-radius: 50%;
+	position: relative;
+	margin: 15vh auto auto auto;
+}
+/* Aiguille des heures*/
+#PetiteA {
+	width: 19vmin;
+	height: 20px;
+	background-color: #F4F4F4;
+	position: absolute;
+	top: 50%;
+	left: 44%;
+	transform-origin: 4vmin 10px;
+	animation-name: GrandeA;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(12, end);
+}
+@keyframes GrandeA {
+	0% {
+		transform: rotateZ(-90deg);		
+	}
+	100% {
+		transform: rotateZ(270deg);
+	}
+}
+/* Aiguille des minutes*/
+#GrandeA {
+	width: 22vmin;
+	height: 20px;
+	background-color: #F4F4F4;
+	position: absolute;
+	top: 50%;
+	left: 44%;
+	transform-origin: 4vmin 10px;
+	animation-name: PetiteA;
+	animation-duration: 50s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(30, end);
+	transform: rotateZ(-90deg);
+}
+@keyframes PetiteA {
+	0% {
+		transform: rotateZ(-90deg);		
+	}
+	100% {
+		transform: rotateZ(270deg);
+	}
+}
+/* Aiguille des secondes */
+#MinimeA {
+	width: 19vmin;
+	height: 5px;
+	background-color: #F4F4F4;
+	position: absolute;
+	top: 51%;
+	left: 44%;
+	transform-origin: 4vmin 2.5px;
+	animation-name: MinimeA;
+	animation-duration: 1.67s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transform: rotateZ(-90deg);
+}
+@keyframes MinimeA {
+	0% {
+		transform: rotateZ(-90deg);		
+	}
+	100% {
+		transform: rotateZ(270deg);
+	}
+}
+/* rond centrale */
+#rond {
+	position: absolute;
+	width: 2vmin;
+	height: 2vmin;
+	background-color: #DCD0C0;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+}
+/* Box et text shadow */
+.shadowA {
+	box-shadow: 10px 5px 5px #000000ad;
+}
+.shadow {
+	text-shadow: 10px 5px 5px black;
+}
+/* Heure horloge */
+.heure {
+	position: absolute;
+	color: #F4F4F4;
+}
+#un {
+	top: 3%;
+	right: 25%;
+}
+#deux {
+	top: 21%;
+	right: 8%;
+}
+#trois {
+	right: 3%;
+	top: 44%;
+}
+#quatre {
+	right: 10%;
+	bottom: 18%;
+}
+#cinq {
+	right: 24%;
+	bottom: 4%;
+}
+#six {
+	bottom: -3%;
+	left: 49%;
+}
+#sept {
+	bottom: 4%;
+	left: 24%;
+}
+#huit {
+	bottom: 18%;
+	left: 10%;
+}
+#neuf {
+	top: 44%;
+	left: 3%;
+}
+#dix {
+	top: 21%;
+	left: 8%;
+}
+#onze {
+	top: 3%;
+	left: 25%;
+}
+#douze {
+	top: -3%;
+	left: 47%;
+}
+/* Quartz */
+#Quartz {
+	position: absolute;
+	color: #DCD0C0;
+	bottom: 9%;
+	left: 40%;
+}
+
+
+/* CONTENU HEURE */
+/* Div global heure */
+#heure {
+	position: relative;
+	overflow: hidden;
+	height: 40px;
+	width: 124px;
+	margin: 4vh auto auto auto;
+	background-color: rgba(192, 178, 131, 0.8);
+	color: #F4F4F4;
+}
+/* Chiffre heure */
+#H12 {
+	position: absolute;
+	top: -20px;
+	animation-name: heure12;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes heure12 {
+	0% {
+		top: -20px;
+	}
+	8.333% {
+		top: 20px;
+	}
+	20% {		
+		top: 20px;
+	}
+	30% {
+		color: transparent;
+	}
+	91% {
+		color: transparent;
+	}
+	92% {
+		color: #F4F4F4;
+	}
+	91.666%{
+		top: -51px;
+	}
+	100% {
+		top: -20px;
+	}
+}
+#H1 {
+	position: absolute;
+	animation-name: heure1;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	left: 10px;
+}
+@keyframes heure1 {
+	0% {
+		top: -51px;
+	}
+	8.333% {
+		top: -20px;
+	}
+	16.666% {
+		top: 20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+#H2 {
+	position: absolute;
+	animation-name: heure2;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	left: 10px;
+}
+@keyframes heure2 {
+	0% {
+		top: -51px;
+	}
+	8.333% {
+		top: -51px;
+	}
+	16.666% {
+		top: -20px;
+	}
+	24.999% {
+		top: 20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+#H3 {
+	position: absolute;
+	animation-name: heure3;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	left: 10px;
+}
+@keyframes heure3 {
+	0% {
+		top: -51px;
+	}
+	16.666% {
+		top: -51px;
+	}
+	24.999% {
+		top: -20px;
+	}
+	33.333% {
+		top: 20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+#H4 {
+	position: absolute;
+	animation-name: heure4;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	left: 10px;
+}
+@keyframes heure4 {
+	0% {
+		top: -51px;
+	}
+	24.999% {
+		top: -51px;
+	}
+	33.333%{
+		top: -20px;
+	}
+	41.666% {
+		top: 20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+#H5 {
+	position: absolute;
+	animation-name: heure5;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	left: 10px;
+}
+@keyframes heure5 {
+	0% {
+		top: -51px;
+	}
+	33.333% {
+		top: -51px;
+	}
+	41.666%{
+		top: -20px;
+	}
+	49.999% {
+		top: 20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+#H6 {
+	position: absolute;
+	animation-name: heure6;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	left: 10px;
+}
+@keyframes heure6 {
+	0% {
+		top: -51px;
+	}
+	41.666% {
+		top: -51px;
+	}
+	49.999%{
+		top: -20px;
+	}
+	58.333% {
+		top: 20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+#H7 {
+	position: absolute;
+	animation-name: heure7;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	left: 10px;
+}
+@keyframes heure7 {
+	0% {
+		top: -51px;
+	}
+	49.999% {
+		top: -51px;
+	}
+	58.333%{
+		top: -20px;
+	}
+	66.666% {
+		top: 20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+#H8 {
+	position: absolute;
+	animation-name: heure8;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	left: 10px;
+}
+@keyframes heure8 {
+	0% {
+		top: -51px;
+	}
+	58.333%{
+		top: -51px;
+	}
+	66.666%{
+		top: -20px;
+	}
+	74.999%{
+		top: 20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+#H9 {
+	position: absolute;
+	animation-name: heure9;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	left: 10px;
+}
+@keyframes heure9 {
+	0% {
+		top: -51px;
+	}
+	66.666%{
+		top: -51px;
+	}
+	74.999%{
+		top: -20px;
+	}
+	83.333%{
+		top: 20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+#H10 {
+	position: absolute;
+	animation-name: heure10;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes heure10 {
+	0% {
+		top: -51px;
+	}
+	74.999%{
+		top: -51px;
+	}
+	83.333%{
+		top: -20px;
+	}
+	91.666%{
+		top: 20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+#H11 {
+	position: absolute;
+	animation-name: heure11;
+	animation-duration: 600s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes heure11 {
+	0% {
+		top: -51px;
+	}
+	83.333%{
+		top: -51px;
+	}
+	91.666%{
+		top: -20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+/* texte heure */
+#HHeure {
+	position: absolute;
+	top: -20px;
+	left: 40px;
+}
